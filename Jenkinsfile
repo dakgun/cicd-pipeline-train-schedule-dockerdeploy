@@ -13,9 +13,6 @@ pipeline {
             steps {
                 script {
                     app = docker.build("akgundyg/train-schedule")
-                    app.inside {
-                        sh 'echo $(curl localhost:8080)'
-                    }
                 }
             }
         }
